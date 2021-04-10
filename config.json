@@ -1,10 +1,20 @@
 {
-  "name": "Demo Addon",
-  "version": "0.1",
-  "slug": "myaddon",
-  "description": "Add-on that prints 'Hello, world' to the log and exits",
-  "url": "https://github.com/issacg/hassio-addon-devcontainer",
+  "name": "Excalidraw Addon",
+  "version": "0.3",
+  "slug": "addon-excalidraw",
+  "description": "Add-on that serves a local excalidraw instance.",
+  "url": "https://github.com/lein1013/addon-excalidraw",
   "startup": "once",
+  "ingress": true,
+  "ingress_port": 80,
+  "init": false,
+  "host_network": true,
+  "ports": {
+    "80/tcp": 80
+  },
+  "ports_description": {
+    "80/tcp": "Web interface (Not required for Ingress)"
+  },
   "boot": "manual",
   "options": {},
   "schema": {}, 
