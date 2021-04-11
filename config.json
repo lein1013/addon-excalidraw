@@ -1,6 +1,6 @@
 {
-  "name": "Excalidraw Addon",
-  "version": "0.3",
+  "name": "Excalidraw",
+  "version": "0.1.0",
   "slug": "addon-excalidraw",
   "description": "Add-on that serves a local excalidraw instance.",
   "url": "https://github.com/lein1013/addon-excalidraw",

@@ -1,2 +1,0 @@
-echo starting nginx
-nginx

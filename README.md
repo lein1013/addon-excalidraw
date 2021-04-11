@@ -1,53 +1,33 @@
-# Home Assistant Add-on Devcontainer Template
+# Home Assistant Excalidraw Add-On
 
-### Summary
+![logo excalidraw](logo.png)
 
-This is a templated to ease development of Home Assistant add-ons inside of a VS Code [devcontainer](https://code.visualstudio.com/docs/remote/containers).
+## About
 
-### Usage
 
-Simply copy the contents of this repository to the base directory of the add-on you are developing. Modify the files in the directory as needed.  
+This Home Assistant add-on provides a lokal instance of https://excalidraw.com/ on your own server. See their github repository (https://github.com/excalidraw/excalidraw) for detailed information. 
 
-Your add-on will be appear in the `Local Add-ons` section of the Home Assistant "Add-on store" tab.
+## Screenshots
+Draw your own Home Assistent architecture
+![Screenshot](docs/screenshot_01.png)
 
-#### VS Code Tasks
 
-The following tasks are included for your convenience.
+### Installation
+1. Add the repository to Home Assistant supervisor: Supervisor -> Add-on Store -> "Three dots on the right" -> Repositories
+2. Add https://github.com/lein1013/addon-excalidraw as additional add-on repository
+3. Install the Excalidraw Addon from the Add-on Store (this could take a while, check the Supervisor logs)
 
-- Start Home Assistant
 
-This task will download and run a Home Assistant environment inside the container using the latest `dev` targets of Home Assistant and Home Assistant Core. It will be mapped to port 8123 (by default) on the host machine.
+### Contribution
+Feel free to fork and improve,... 
 
-- Run Home Assistant CLI - _Requires a running Home Assistant instance_
+[Additional developer notes ](addon_dev.md)
 
-This task will open a [Home Assistant CLI](https://github.com/home-assistant/cli) window inside VS Code.
+### Credits
+All credits got to the Homeassistant and Excalidraw team and community! 
+I just did my first steps with this add-on :-)
 
-- Cleanup stale Home Assistant environment
 
-This task will nuke the data stored by Home Assistant (including the underlying Home Assistant Core). Can be used to revert to a pristine state before starting Home Assistant.
+### Kown Limitations
+- In some cases it was observed that excalidraw got stuck at "loading"; there is an open issue https://github.com/excalidraw/excalidraw/issues/2083 - it seems to be related with the service_worker.js load process (cache issue?)
 
-### FAQ
-
-Q: How do I customize some-widget-or-another?
-
-A: There is almost no "black magic" going on here. Make sure to read up on how devcontainers work from the [official website](https://code.visualstudio.com/docs/remote/containers).
-
-Q: I read the docs. I still need help customizing some-widget-or-another!
-
-A: Come ask on [Discord](https://discordapp.com/invite/2Uath3J) in channel #devs_addon or #devs_supervisor.
-
-Q: How do I develop more than one add-on in the same Home Assistant instance?
-
-A: See [this issue](https://github.com/issacg/hassio-addon-devcontainer/issues/1).
-
-Q: Why are there 2 `Dockerfile`s?  
-
-A: The `.devcontainer\Dockerfile` is for your development environment. The `Dockerfile` in the root directory is to build your add-on.
-
-Q: I added `.devcontainer` to my `.dockerignore` and now things are broken.
-
-A: Don't. The `.dockerignore` is shared by both Dockerfiles, and by adding `.devcontainer` to your `.dockerignore`, you will break things in the devcontainer. Instead, use other means to avoid copying `.devcontainer` (and `.vscode` for that matter) in your "production" `Dockerfile`.
-
-Q: When installing my local add-on, I'm not seeing my latest changes. Instead, I see the functionality of the last published version of my add-on.
-
-A: Make sure that you remove the `image` key from your `config.json`, else when "installing" the add-on, it will try to use the docker image, rather than building the add-on locally.
