@@ -7,6 +7,7 @@
   "startup": "once",
   "ingress": true,
   "ingress_port": 80,
+  "panel_icon": "mdi:draw",
   "init": false,
   "host_network": true,
   "ports": {
@@ -15,7 +16,7 @@
   "ports_description": {
     "80/tcp": "Web interface (Not required for Ingress)"
   },
-  "boot": "manual",
+  "boot": "auto",
   "options": {},
   "schema": {}, 
   "arch": ["amd64", "armv7", "armhf", "i386" , "aarch64"]

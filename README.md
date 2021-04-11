@@ -4,7 +4,6 @@
 
 ## About
 
-
 This Home Assistant add-on provides a lokal instance of https://excalidraw.com/ on your own server. See their github repository (https://github.com/excalidraw/excalidraw) for detailed information. 
 
 ## Screenshots
@@ -21,7 +20,7 @@ Draw your own Home Assistent architecture
 ### Contribution
 Feel free to fork and improve,... 
 
-[Additional developer notes ](addon_dev.md)
+[Additional developer notes ](https://github.com/lein1013/addon-excalidraw/blob/master/addon_dev.md)
 
 ### Credits
 All credits got to the Homeassistant and Excalidraw team and community! 
