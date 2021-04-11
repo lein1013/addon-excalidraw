@@ -1,6 +1,6 @@
 # Home Assistant Excalidraw Add-On
 
-![logo excalidraw](logo.png)
+![logo excalidraw][addon_logo]
 
 ## About
 
@@ -9,7 +9,7 @@ This Home Assistant add-on provides a lokal instance of https://excalidraw.com/ 
 
 ## Screenshots
 Draw your own Home Assistent architecture
-![Screenshot](docs/screenshot_01.png)
+![Screenshot][screenshot_01]
 
 
 ### Installation
@@ -31,3 +31,5 @@ I just did my first steps with this add-on :-)
 ### Kown Limitations
 - In some cases it was observed that excalidraw got stuck at "loading"; there is an open issue https://github.com/excalidraw/excalidraw/issues/2083 - it seems to be related with the service_worker.js load process (cache issue?)
 
+[screenshot_01]: https://github.com/lein1013/addon-excalidraw/raw/master/docs/screenshot_01.png
+[addon_logo]: https://github.com/lein1013/addon-excalidraw/raw/master/logo.png
