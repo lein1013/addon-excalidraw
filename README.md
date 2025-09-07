@@ -1,3 +1,5 @@
+> ⚠️ **IMPORTANT: This repository is currently not maintained due to time constraints. Please check out the  fork by [iamer](https://github.com/iamer/addon-excalidraw).** ⚠️
+
 # Home Assistant Excalidraw Add-On
 
 ![logo excalidraw][addon_logo]
